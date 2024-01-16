@@ -5,8 +5,7 @@
   "files": ["dist"],
   "scripts": {
     "build": "node build.js",
-    "prepare-demo": "node prepare-demo.js",
-    "demo": "node ./demo/http.js"
+    "extension": "node build_extension.js"
   },
   "repository": {
     "type": "git",

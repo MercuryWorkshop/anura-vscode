@@ -29,6 +29,8 @@ if (fs.existsSync("../dist")) {
   fs.rmdirSync("../dist", { recursive: true });
 }
 fs.mkdirSync("../dist");
+fse.copySync("../index.html", "../vscode-web/index.html")
+fse.copySync("../product.json", "../vscode-web/product.json")
 fse.copySync("../vscode-web", "../dist");
 
 
