@@ -19,7 +19,7 @@
 	  }
 	},
 	"folderUri": {
-	  "scheme": "memfs",
+	  "scheme": "anura",
 	  "path": "/sample-folder"
 	},
 	"additionalBuiltinExtensions": [
