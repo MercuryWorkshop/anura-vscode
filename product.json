@@ -1,9 +1,9 @@
 {
 	"productConfiguration": {
-	  "nameShort": "VSCode Web Sample",
-	  "nameLong": "VSCode Web sample",
-	  "applicationName": "code-web-sample",
-	  "dataFolderName": ".vscode-web-sample",
+	  "nameShort": "Anura VSCode",
+	  "nameLong": "Anura VSCode",
+	  "applicationName": "anura-vscode",
+	  "dataFolderName": ".anura-vscode",
 	  "version": "1.75.0",
 	  "extensionsGallery": {
 		"serviceUrl": "https://open-vsx.org/vscode/gallery",
@@ -12,7 +12,7 @@
 		  "https://openvsxorg.blob.core.windows.net/resources/{publisher}/{name}/{version}/{path}"
 	  },
 	  "extensionEnabledApiProposals": {
-		"vscode.vscode-web-playground": [
+		"anura.integration": [
 		  "fileSearchProvider",
 		  "textSearchProvider"
 		]
@@ -25,7 +25,7 @@
 	"additionalBuiltinExtensions": [
 	  {
 		"scheme": "http",
-		"path": "/myExt"
+		"path": "/extension"
 	  }
 	]
   }

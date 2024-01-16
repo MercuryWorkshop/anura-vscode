@@ -5,7 +5,8 @@
   "files": ["dist"],
   "scripts": {
     "build": "node build.js",
-    "extension": "node build_extension.js"
+    "extension": "node build_extension.js",
+    "dev": "node serve.js"
   },
   "repository": {
     "type": "git",
