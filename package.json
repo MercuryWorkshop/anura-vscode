@@ -1,7 +1,7 @@
 {
-  "name": "vscode-web",
+  "name": "vscode-anuraos",
   "version": "1.84.2",
-  "description": "Visual Studio Code for browser",
+  "description": "Visual Studio Code for AnuraOS",
   "files": ["dist"],
   "scripts": {
     "build": "node build.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Felx-B/vscode-web.git"
+    "url": "git+https://github.com/MercuryWorkshop/vscode-anuraos.git"
   },
-  "author": "Felix B",
+  "author": "MercuryWorkshop",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Felx-B/vscode-web/issues"
+    "url": "https://github.com/MercuryWorkshop/anura-vscode/issues"
   },
-  "homepage": "https://github.com/Felx-B/vscode-web#readme",
+  "homepage": "https://github.com/MercuryWorkshop/anura-vscode#readme",
   "devDependencies": {
     "express": "^4.17.1",
     "fs-extra": "^9.0.1"
