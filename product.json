@@ -1,32 +1,27 @@
 {
-	"productConfiguration": {
-	  "nameShort": "Anura VSCode",
-	  "nameLong": "Anura VSCode",
-	  "applicationName": "anura-vscode",
-	  "dataFolderName": ".anura-vscode",
-	  "version": "1.75.0",
-	  "extensionsGallery": {
-		"serviceUrl": "https://open-vsx.org/vscode/gallery",
-		"itemUrl": "https://open-vsx.org/vscode/item",
-		"resourceUrlTemplate":
-		  "https://openvsxorg.blob.core.windows.net/resources/{publisher}/{name}/{version}/{path}"
-	  },
-	  "extensionEnabledApiProposals": {
-		"anura.integration": [
-		  "fileSearchProvider",
-		  "textSearchProvider"
-		]
-	  }
-	},
-	"folderUri": {
-	  "scheme": "anura",
-	  "path": "/sample-folder"
-	},
-	"additionalBuiltinExtensions": [
-	  {
-		"scheme": "http",
-		"path": "/extension"
-	  }
-	]
-  }
-  
+  "productConfiguration": {
+    "nameShort": "Anura VSCode",
+    "nameLong": "Anura VSCode",
+    "applicationName": "anura-vscode",
+    "dataFolderName": ".anura-vscode",
+    "version": "1.75.0",
+    "extensionsGallery": {
+      "serviceUrl": "https://open-vsx.org/vscode/gallery",
+      "itemUrl": "https://open-vsx.org/vscode/item",
+      "resourceUrlTemplate": "https://openvsxorg.blob.core.windows.net/resources/{publisher}/{name}/{version}/{path}"
+    },
+    "extensionEnabledApiProposals": {
+      "anura.integration": ["fileSearchProvider", "textSearchProvider"]
+    }
+  },
+  "folderUri": {
+    "scheme": "anura",
+    "path": "/sample-folder"
+  },
+  "additionalBuiltinExtensions": [
+    {
+      "scheme": "http",
+      "path": "/fs/vscode-ext"
+    }
+  ]
+}

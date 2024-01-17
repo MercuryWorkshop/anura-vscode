@@ -2,10 +2,14 @@
   "name": "vscode-anuraos",
   "version": "1.84.2",
   "description": "Visual Studio Code for AnuraOS",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node build.js",
     "extension": "node build_extension.js",
+    "package": "node package.js",
+    "package-extension": "node package_extension.js",
     "dev": "node serve.js"
   },
   "repository": {

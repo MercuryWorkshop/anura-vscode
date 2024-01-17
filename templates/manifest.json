@@ -1,0 +1,12 @@
+{
+  "name": "Visual Studio Code",
+  "type": "auto",
+  "package": "anura.vscode",
+  "index": "vscode/index.html",
+  "icon": "vscode/code-512.png",
+  "wininfo": {
+    "title": "VSCode - Anura",
+    "width": "800px",
+    "height": "600px"
+  }
+}

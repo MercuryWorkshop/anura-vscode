@@ -1,0 +1,9 @@
+{
+  "name": "Anura VSCode Extension",
+  "icon": "libtest.png",
+  "package": "anura.vscode.extension",
+  "versions": {},
+  "cache": false,
+  "installHook": "install.js",
+  "currentVersion": "1.0.0"
+}
