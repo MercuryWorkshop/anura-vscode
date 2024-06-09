@@ -1,5 +1,6 @@
-const fs = require("fs");
-const fse = require("fs-extra");
+import * as fs from "fs"
+import * as fse from "fs-extra"
+import archiver from "archiver"
 
 const { version } = JSON.parse(fs.readFileSync("extension/package.json"));
 
@@ -64,3 +65,36 @@ fs.writeFileSync(
     .replace("${LATEST_VERSION}", "v" + version.replace(/\./g, "_")),
   "utf8"
 );
+
+fs.readFile(`${outputBasePath}/manifest.json`, (err, data) => {
+  if (err) throw err;
+  const manifest = JSON.parse(data);
+  const output = fs.createWriteStream(
+    `${outputBasePath}/${manifest.package}.lib.zip`
+  );
+  const archive = archiver("zip", {
+    zlib: { level: 0 },
+  });
+  output.on("close", () => {
+    console.log("Finished building anuraOS library package: " + manifest.package);
+    console.log(archive.pointer() + " total bytes");
+  });
+
+  archive.on("warning", (err) => {
+    if (err.code === "ENOENT") {
+      console.warn(err);
+    } else {
+      throw err;
+    }
+  });
+
+  archive.on("error", (err) => {
+    throw err;
+  });
+
+  archive.pipe(output);
+
+  archive.directory(`${outputBasePath}`, false);
+
+  archive.finalize();
+});
