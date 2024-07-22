@@ -7,10 +7,10 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "extension": "node build_extension.js",
-    "package": "node package.js",
-    "package-extension": "node package_extension.js",
+    "build:vscode": "node build.js",
+    "build:extension": "node build_extension.js",
+    "package:vscode": "node package.js",
+    "package:extension": "node package_extension.js",
     "dev": "node serve.js"
   },
   "repository": {

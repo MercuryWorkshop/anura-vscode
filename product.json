@@ -16,7 +16,7 @@
   },
   "folderUri": {
     "scheme": "anura",
-    "path": "/sample-folder"
+    "path": "/"
   },
   "additionalBuiltinExtensions": [
     {

@@ -1,7 +1,7 @@
-const process = require("process");
-const child_process = require("child_process");
-const fs = require("fs");
-const fse = require("fs-extra");
+import process from "process"
+import child_process from "child_process"
+import fs from "fs"
+import fse from "fs-extra"
 
 async function fetchData() {
   try {
