@@ -25,29 +25,28 @@ async function main() {
   }
 
   if (!fs.existsSync("vscode")) {
-    fs.rmdirSync("vscode", { recursive: true, force: true })
+    child_process.execSync(`git clone --depth 1 https://github.com/microsoft/vscode.git -b ${vscodeVersion}`, {
+      stdio: "inherit",
+    });
+  } else {
+    console.log("delete vscode to reclone")
   }
-  
-  child_process.execSync(`git clone --depth 1 https://github.com/microsoft/vscode.git -b ${vscodeVersion}`, {
-    stdio: "inherit",
-  });
-
   process.chdir("vscode");
 
   if (!fs.existsSync("node_modules")) {
     child_process.execSync("yarn", { stdio: "inherit" });
+  } else {
+    console.log("node_modules exists. Skipping yarn")
   }
 
-  fs.copyFileSync(
-    "../workbench.ts",
-    "src/vs/code/browser/workbench/workbench.ts"
-  );
+  //fs.copyFileSync("../workbench.ts", "src/vs/code/browser/workbench/workbench.ts");
 
   child_process.execSync("yarn gulp vscode-web-min", { stdio: "inherit" });
 
   if (fs.existsSync("../dist")) {
     fs.rmdirSync("../dist", { recursive: true });
   }
+
   fs.mkdirSync("../dist");
   fse.copySync("../index.html", "../vscode-web/index.html")
   fse.copySync("../product.json", "../vscode-web/product.json")

@@ -9,19 +9,6 @@
       "serviceUrl": "https://open-vsx.org/vscode/gallery",
       "itemUrl": "https://open-vsx.org/vscode/item",
       "resourceUrlTemplate": "https://openvsxorg.blob.core.windows.net/resources/{publisher}/{name}/{version}/{path}"
-    },
-    "extensionEnabledApiProposals": {
-      "anura.integration": ["fileSearchProvider", "textSearchProvider"]
     }
-  },
-  "folderUri": {
-    "scheme": "anura",
-    "path": "/"
-  },
-  "additionalBuiltinExtensions": [
-    {
-      "scheme": "http",
-      "path": "/fs/vscode-ext"
-    }
-  ]
+  }
 }

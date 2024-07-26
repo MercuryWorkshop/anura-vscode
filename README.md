@@ -16,12 +16,3 @@ Then simply run the following commands
 yarn
 yarn build
 ```
-
-## Build extension from source 
-
-Run the following commands
-
-```sh
-yarn
-yarn extension
-```
