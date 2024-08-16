@@ -29,6 +29,21 @@
   <body aria-label=""></body>
 
   <!-- Startup (do not modify order of script tags!) -->
+  <script>
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "/product.json", false);
+		xhr.send(null);
+
+		if (xhr.status === 200) {
+			var meta = document.createElement('meta');
+			meta.id = "vscode-workbench-web-configuration";
+			meta.setAttribute("data-settings", xhr.responseText);
+			document.head.appendChild(meta);
+		} else {
+			console.error("Fetching workbench config failed:", xhr.statusText);
+		}
+	</script>
+
   <script src="./out/vs/loader.js"></script>
   <script src="./out/vs/webPackagePaths.js"></script>
   <script>

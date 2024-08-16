@@ -37,12 +37,7 @@ async function main() {
   if (!fs.existsSync("node_modules")) {
     child_process.execSync("yarn", { stdio: "inherit" });
   }
-
-  fs.copyFileSync(
-    "../workbench.ts",
-    "src/vs/code/browser/workbench/workbench.ts"
-  );
-
+  
   child_process.execSync("yarn gulp vscode-web-min", { stdio: "inherit" });
 
   if (fs.existsSync("../dist")) {
