@@ -24,13 +24,13 @@ async function main() {
     return;
   }
 
-  if (!fs.existsSync("vscode")) {
-    fs.rmdirSync("vscode", { recursive: true, force: true })
-  }
   
-  child_process.execSync(`git clone --depth 1 https://github.com/microsoft/vscode.git -b ${vscodeVersion}`, {
-    stdio: "inherit",
-  });
+  if (!fs.existsSync("vscode")) {
+    // fs.rmdirSync("vscode", { recursive: true, force: true })
+    child_process.execSync(`git clone --depth 1 https://github.com/microsoft/vscode.git -b ${vscodeVersion}`, {
+      stdio: "inherit",
+    });
+  }
 
   process.chdir("vscode");
 

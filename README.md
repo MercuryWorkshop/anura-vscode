@@ -14,7 +14,7 @@ Then simply run the following commands
 
 ```sh
 yarn
-yarn build
+yarn build:vscode
 ```
 
 ## Build extension from source 
@@ -23,5 +23,5 @@ Run the following commands
 
 ```sh
 yarn
-yarn extension
+yarn build:extension
 ```
