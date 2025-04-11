@@ -1,3 +1,5 @@
+**this is deprecated and has been switched to an extension based approach, please use [vscode-anura](https://github.com/MercuryWorkshop/vscode-anura) instead**
+
 # VSCode Web
 This project is aimed to build a web version of VSCode meant for AnuraOS, this is not a fork, simply a web compilation of the VSCode project.
 
